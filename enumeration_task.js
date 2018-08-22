@@ -20,6 +20,18 @@ const getEvens = function (){
 console.log(getEvens());
 
 
+const getEvenNumbers = function(){
+  const result = numbers.filter((number)=>{
+    return number %2 ===0;
+  });
+  return result;
+}
+console.log(getEvenNumbers());
+
+
+
+
+
 const getMultiplyBy2 = function (){
   let multiplyBy2Array = [];
   numbers.forEach(function(number){
@@ -28,6 +40,25 @@ const getMultiplyBy2 = function (){
   return multiplyBy2Array;
 }
 console.log(getMultiplyBy2());
+
+
+// // ### use map instead of forEach
+const getMultiplyBy3 = function (){
+  multiplyBy3Array =numbers.map(number => number*3);
+  return multiplyBy3Array;
+}
+console.log(getMultiplyBy3());
+
+
+const getMultiplyBy4 = function (){
+  multiplyBy4Array =numbers.map((number) => {
+    return number * 4;
+  });
+  return multiplyBy4Array;
+}
+console.log(getMultiplyBy4());
+
+
 
 
 
@@ -41,16 +72,26 @@ const sumElements = function(){
 console.log(sumElements());
 
 
-// const myForEach = function(array, callback){
-//   for (let element of array){
-//     callback(element);
-//   }
-// }
-// const sumElements = function(){
-//   let sumValue = 0;
-//   myForEach(numbers, (number) => {
-//     sumValue += number;
-//   });
-//   return sumValue
-// }
-// console.log(sumElements());
+const myForEach = function(array, callback){
+  for (let element of array){
+    callback(element);
+  }
+}
+const summaryOfNumbers = function(){
+  let sumValue = 0;
+  myForEach(numbers, (number) => {
+    sumValue += number;
+  });
+  return sumValue
+}
+console.log(summaryOfNumbers());
+
+
+const sumOfElements = function(){
+  const result = numbers.reduce((total, number)=>{
+    return total + number;
+  }, 15);
+// // total starts from 15
+  return result;
+}
+console.log(sumOfElements());
