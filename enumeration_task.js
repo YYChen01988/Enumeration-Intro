@@ -20,6 +20,17 @@ const getEvens = function (){
 console.log(getEvens());
 
 
+const getMultiplyBy2 = function (){
+  let multiplyBy2Array = [];
+  numbers.forEach(function(number){
+      multiplyBy2Array.push(number*2);
+  });
+  return multiplyBy2Array;
+}
+console.log(getMultiplyBy2());
+
+
+
 const sumElements = function(){
   let sumValue = 0;
   numbers.forEach((number) => {
